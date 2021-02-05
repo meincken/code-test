@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
-import { device } from "./helpers";
+import { device } from "../shared/helpers";
 
-import Home from "./pages/home/";
-import Category from "./pages/category/";
-import Recipe from "./pages/recipes/";
+import Home from "../pages/home/";
+import Category from "../pages/category/";
+import Recipe from "../pages/recipes/";
 
 const Main = styled.main`
   display: grid;

@@ -23,16 +23,14 @@ function Category(props) {
       {!loading && (
         <>
           {data.meals.meals.map((item, index) => (
-            <>
+            <article key={index.toString()}>
               <Link to={`/categories/${item.strCategory}`}>
                 Back to Category
               </Link>
-              <article key={index.toString()}>
-                <img src={item.strMealThumb} alt={item.strMeal} />
-                <h2>{item.strMeal}</h2>
-                <p>{item.strInstructions}</p>
-              </article>
-            </>
+              <img src={item.strMealThumb} alt={item.strMeal} />
+              <h2>{item.strMeal}</h2>
+              <p>{item.strInstructions}</p>
+            </article>
           ))}
         </>
       )}
