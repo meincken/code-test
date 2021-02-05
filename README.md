@@ -8,4 +8,4 @@ To run this application
 
 `yarn start` or `npm run start`
 
-This will open the project in [http://localhost:3000]
+This will open the project in (http://localhost:3000)
