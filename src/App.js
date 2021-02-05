@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import styled from "styled-components";
+import { device } from "./helpers";
+
+import Home from "./pages/home/";
+import Category from "./pages/category/";
+import Recipe from "./pages/recipes/";
+
+const Main = styled.main`
+  display: grid;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  width: 75%;
+
+  @media ${device.laptop} {
+    max-width: 720px;
+    width: 90%;
+  }
+
+  div {
+    text-align: center;
+
+    p {
+      text-align: left;
+    }
+  }
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Main>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/categories/:slug" component={Category} />
+          <Route path="/recipe/:id" component={Recipe} />
+        </Switch>
+      </Main>
+    </Router>
   );
 }
 
