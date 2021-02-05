@@ -20,3 +20,4 @@ planned it into my timeline.
 - [x] AC3: As a user running the application, I can see a thumbnail for each item in the lists where available.
 - [x] AC4: As a user running the application, I can see a detail page for each recipe when selecting one from a list.
 - [ ] Unit test
+- [ ] Add styles to each section
